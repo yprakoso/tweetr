@@ -18,5 +18,25 @@
   padding-left: 10px;
   font-size: 200%;
   line-height: 200%;
+}
 
+#nav-bar .compose {
+  float: right;
+  border-style: solid;
+  border-radius: 5px;
+  padding: 8px 4px;
+  margin-top: 15px;
+}
+
+.compose:hover {
+  background-color: lightgrey;
+}
+
+#nav-bar .compose i {
+
+}
+
+#nav-bar .compose label {
+  display: inline;
+  color: auto;
 }

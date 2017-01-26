@@ -1,0 +1,53 @@
+main section #allTweets {
+  /*position: relative;*/
+  margin: 1em 2em;
+  border-style: solid;
+  border-radius: 10px;
+}
+
+#allTweets:hover header {
+  background-color: gray;
+}
+
+main section #allTweets header {
+  background-color: lightgray;
+  border-radius: 6px 6px 0px 0px;
+  padding-left: 5px;
+  border-bottom: solid;
+  border-bottom-width: 1px;
+}
+
+
+main section #allTweets header h3 {
+  border-top: 5px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 10px 5px 10px 5px;
+  line-height: 500%;
+  vertical-align: top;
+}
+
+main section header .avatar {
+  margin-top: 5px;
+  width: 80px;
+  display: inline;
+  border-radius: 10px;
+}
+
+main section header .user {
+  display: inline;
+  /*line-height: 10px;*/
+}
+
+main section #allTweets p {
+  padding: 10px 10px;
+}
+
+main section #allTweets footer {
+  padding: 5px 5px 5px 5px;
+  border-top: solid;
+  border-top-width: 1px;
+}
+main section #allTweets footer p {
+  margin: 0 0;
+}
