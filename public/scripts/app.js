@@ -16,6 +16,7 @@ function createTweetElement(tweet) {
         <header>
           <img class="avatar" src="${avatar}" >
             <h3 class="user">${name}</h3>
+            <label class="username">${username}</label>
         </header>
         <p>${content}</p>
         <footer>
@@ -56,6 +57,7 @@ $(function() {
       let dataTweets = $(this).serialize();
       $.ajax('/tweets', {method: "post", data: dataTweets})
       .then((result) => {
+        $('textarea')[0].value = "";
         loadTweets();
       })
       .fail((error) => console.error(error))

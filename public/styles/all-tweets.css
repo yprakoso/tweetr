@@ -27,6 +27,12 @@ main section #allTweets header h3 {
   vertical-align: top;
 }
 
+main section #allTweets header .username {
+  float: right;
+  padding-top: 35px;
+  padding-right: 5px;
+}
+
 main section header .avatar {
   margin-top: 5px;
   width: 80px;
