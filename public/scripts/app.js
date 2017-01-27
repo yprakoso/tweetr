@@ -10,7 +10,7 @@ function createTweetElement(tweet) {
   let avatar = tweet.user.avatars.small;
   let name = tweet.user.name
   let content = tweet.content.text;
-  let time = tweet.created_at;
+  let time = new Date(tweet.created_at).toLocaleString();
   let code = `
       <article id="allTweets">
         <header>
@@ -18,9 +18,16 @@ function createTweetElement(tweet) {
             <h3 class="user">${name}</h3>
             <label class="username">${username}</label>
         </header>
-        <p>${content}</p>
+        <div class="content">
+          <label>${content}</label>
+        </div>
         <footer>
-          <p>${time}</p>
+          <label id="time">${time}</label>
+          <div class="interactive-icons">
+            <i class="fa fa-flag interactive-icon" aria-hidden="true"></i>
+            <i class="fa fa-retweet interactive-icon" aria-hidden="true"></i>
+            <i class="fa fa-heart interactive-icon" aria-hidden="true"></i>
+          </div
         </footer>
       </article>
   `

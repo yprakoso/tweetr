@@ -45,8 +45,14 @@ main section header .user {
   /*line-height: 10px;*/
 }
 
-main section #allTweets p {
+main section .content {
   padding: 10px 10px;
+  border: 20px 0px;
+  margin: 10px 0px;
+}
+
+main section .content label {
+  margin: 10px 0px;
 }
 
 main section #allTweets footer {
@@ -54,6 +60,19 @@ main section #allTweets footer {
   border-top: solid;
   border-top-width: 1px;
 }
-main section #allTweets footer p {
+main section #time {
   margin: 0 0;
+}
+
+.interactive-icons {
+  border: 2px;
+  float: right;
+}
+
+.interactive-icon {
+  padding: 1px 1px;
+}
+
+.interactive-icon:hover {
+  background-color: lightgray;
 }
