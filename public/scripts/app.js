@@ -4,6 +4,12 @@ function renderTweets(tweets) {
   });
 }
 
+function escape(str) {
+  var div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
+
 function createTweetElement(tweet) {
   //var $tweet = $('<article>').addClass('Alltweets');
   let username = tweet.user.handle;
@@ -19,7 +25,7 @@ function createTweetElement(tweet) {
             <label class="username">${username}</label>
         </header>
         <div class="content">
-          <label>${content}</label>
+          <label>${escape(content)}</label>
         </div>
         <footer>
           <label id="time">${time}</label>
@@ -61,6 +67,7 @@ $(function() {
     } else if ($('textarea')[0].textLength > 140) {
       alert("You can't tweet more than 140 characters");
     } else {
+      console.log($(this));
       let dataTweets = $(this).serialize();
       $.ajax('/tweets', {method: "post", data: dataTweets})
       .then((result) => {
